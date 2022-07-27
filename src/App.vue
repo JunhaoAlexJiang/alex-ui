@@ -16,6 +16,22 @@
       <al-button plain type="warning">按钮</al-button>
       <al-button plain type="danger">按钮</al-button>
     </div>
+    <div class="row">
+      <al-button>按钮</al-button>
+      <al-button plain round type="primary">按钮</al-button>
+      <al-button plain round type="success">按钮</al-button>
+      <al-button plain round type="info">按钮</al-button>
+      <al-button plain round type="warning">按钮</al-button>
+      <al-button plain round type="danger">按钮</al-button>
+    </div>
+    <div class="row">
+      <al-button>拆</al-button>
+      <al-button plain circle type="primary">拆</al-button>
+      <al-button plain circle type="success">拆</al-button>
+      <al-button plain circle type="info">拆</al-button>
+      <al-button plain circle type="warning">拆</al-button>
+      <al-button plain circle type="danger">拆</al-button>
+    </div>
   </div>
 </template>
 

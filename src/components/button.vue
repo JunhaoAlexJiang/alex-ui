@@ -1,7 +1,10 @@
 <template>
   <button
     class="al-button"
-    :class="[`al-button-${type}`, { 'is-plain': plain }]"
+    :class="[
+      `al-button-${type}`,
+      { 'is-plain': plain, 'is-round': round, 'is-circle': circle },
+    ]"
   >
     <span><slot /></span>
   </button>
@@ -16,6 +19,14 @@ export default {
       default: "",
     },
     plain: {
+      type: Boolean,
+      default: false,
+    },
+    round: {
+      type: Boolean,
+      default: false,
+    },
+    circle: {
       type: Boolean,
       default: false,
     },
@@ -171,5 +182,17 @@ export default {
     border-color: #f56c6c;
     color: #fff;
   }
+}
+
+// round属性
+.al-button.is-round {
+  border-radius: 20px;
+  padding: 12px 23px;
+}
+
+// circle属性
+.al-button.is-circle {
+  border-radius: 50%;
+  padding: 12px;
 }
 </style>
