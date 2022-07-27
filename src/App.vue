@@ -1,5 +1,13 @@
 <template>
-  <div id="app">你好</div>
+  <div id="app">
+    <div class="row">
+      <al-button>按钮</al-button>
+      <al-button>按钮</al-button>
+      <al-button>按钮</al-button>
+      <al-button>按钮</al-button>
+      <al-button>按钮</al-button>
+    </div>
+  </div>
 </template>
 
 <script>
