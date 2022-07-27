@@ -1,5 +1,8 @@
 <template>
-  <button class="al-button" :class="[`al-button-${type}`]">
+  <button
+    class="al-button"
+    :class="[`al-button-${type}`, { 'is-plain': plain }]"
+  >
     <span><slot /></span>
   </button>
 </template>
@@ -11,6 +14,10 @@ export default {
     type: {
       type: String,
       default: "",
+    },
+    plain: {
+      type: Boolean,
+      default: false,
     },
   },
 };
@@ -102,6 +109,66 @@ export default {
   &:focus {
     background: #f78989;
     background-color: #f78989;
+    color: #fff;
+  }
+}
+
+// 朴素按钮样式
+.al-button.is-plain {
+  &:hover,
+  &:focus {
+    background: #fff;
+    border-color: #489eff;
+    color: #409eff;
+  }
+}
+.al-button-primary.is-plain {
+  color: #409eff;
+  background: #ecf5ff;
+  &:hover,
+  &:focus {
+    background: #409eff;
+    border-color: #409eff;
+    color: #fff;
+  }
+}
+.al-button-success.is-plain {
+  color: #67c23a;
+  background: #c2e7b0;
+  &:hover,
+  &:focus {
+    background: #67c23a;
+    border-color: #67c23a;
+    color: #fff;
+  }
+}
+.al-button-info.is-plain {
+  color: #909399;
+  background: #d3d4d6;
+  &:hover,
+  &:focus {
+    background: #909399;
+    border-color: #909399;
+    color: #fff;
+  }
+}
+.al-button-warning.is-plain {
+  color: #e6a23c;
+  background: #f5dab1;
+  &:hover,
+  &:focus {
+    background: #e6a23c;
+    border-color: #e6a23c;
+    color: #fff;
+  }
+}
+.al-button-danger.is-plain {
+  color: #f56c6c;
+  background: #fbc4c4;
+  &:hover,
+  &:focus {
+    background: #f56c6c;
+    border-color: #f56c6c;
     color: #fff;
   }
 }
