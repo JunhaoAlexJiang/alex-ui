@@ -38,6 +38,21 @@
 <script>
 export default {
   name: "App",
+  data() {
+    return {
+      id: "",
+    };
+  },
+  methods: {
+    update(val) {
+      this.id = val;
+    },
+    clickButton() {
+      this.id = this.$store.state.id;
+      console.log(this.id);
+    },
+  },
+  components: {},
 };
 </script>
 
