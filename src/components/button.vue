@@ -5,6 +5,7 @@
       `al-button-${type}`,
       { 'is-plain': plain, 'is-round': round, 'is-circle': circle },
     ]"
+    @click="clickButton"
   >
     <span><slot /></span>
   </button>
@@ -29,6 +30,11 @@ export default {
     circle: {
       type: Boolean,
       default: false,
+    },
+  },
+  methods: {
+    clickButton(e) {
+      this.$emit("click", e);
     },
   },
 };

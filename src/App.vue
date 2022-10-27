@@ -39,19 +39,9 @@
 export default {
   name: "App",
   data() {
-    return {
-      id: "",
-    };
+    return {};
   },
-  methods: {
-    update(val) {
-      this.id = val;
-    },
-    clickButton() {
-      this.id = this.$store.state.id;
-      console.log(this.id);
-    },
-  },
+  methods: {},
   components: {},
 };
 </script>
